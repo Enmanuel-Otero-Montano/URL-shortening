@@ -33,7 +33,7 @@ export class UrlGeneratorComponent implements OnInit {
     const urls = JSON.parse(urlsStored)
     if(urlsStored !== null) {
       for(let url of urls) {
-        this.urlsArray.unshift(url)
+        this.urlsArray.push(url)
       }
       this.count = this.urlsArray[this.urlsArray.length-1].id
     }else {
