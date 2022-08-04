@@ -49,7 +49,6 @@ export class UrlGeneratorComponent implements OnInit {
         url: this.url,
         urlShorten: this.urlShorten
       }
-      console.log(inputValue)
       try {await lastValueFrom(this.CallApiService.call(inputValue).pipe(
         tap(res => obj.urlShorten = res.result.full_short_link2)))
         this.urlShorten = obj.urlShorten
@@ -69,7 +68,7 @@ export class UrlGeneratorComponent implements OnInit {
   }
 
   storeUrls(urlsObj: { id: number; url: string; urlShorten: string; }) {
-    this.urlsArray.push(urlsObj)
+    this.urlsArray.unshift(urlsObj)
     localStorage.setItem("urls", JSON.stringify(this.urlsArray))
   }
 
