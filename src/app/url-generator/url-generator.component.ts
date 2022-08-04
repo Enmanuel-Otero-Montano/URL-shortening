@@ -1,6 +1,6 @@
-import { Component, ElementRef, ErrorHandler, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 import { CallApiService } from '../call-api.service';
-import { tap, lastValueFrom, catchError, throwError } from 'rxjs';
+import { tap, lastValueFrom, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 
 
@@ -33,7 +33,7 @@ export class UrlGeneratorComponent implements OnInit {
     const urls = JSON.parse(urlsStored)
     if(urlsStored !== null) {
       for(let url of urls) {
-        this.urlsArray.push(url)
+        this.urlsArray.unshift(url)
       }
       this.count = this.urlsArray[this.urlsArray.length-1].id
     }else {
@@ -59,7 +59,6 @@ export class UrlGeneratorComponent implements OnInit {
         this.showUrls = true
         this.show = false
         this.urlInput.nativeElement.value = ""
-        console.log("Estoy despues del await")
       }catch (error: any) {
         this.errorText = error.error.error
         this.show = true
