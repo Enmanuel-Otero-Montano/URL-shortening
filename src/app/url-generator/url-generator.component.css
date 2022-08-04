@@ -81,7 +81,7 @@
 
     .url-generator-container {
         flex-direction: row;
-        background: url(./assets/images/bg-shorten-desktop.svg) no-repeat;
+        background: url(../../assets/images/bg-shorten-desktop.svg) no-repeat;
         background-color: var(--primary-color-two);
     }
 
