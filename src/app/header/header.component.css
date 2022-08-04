@@ -219,7 +219,7 @@
 @media screen and (min-width: 1366px) {
 
     .header {
-        padding: 20px 200px 0;
+        padding: 20px 180px 0;
     }
 
     .hero {
@@ -234,7 +234,7 @@
     }
     
     .hero-hero-description-btn-container {
-        left: 200px;
+        left: 180px;
     }
 
     .background-image-container {
