@@ -238,7 +238,7 @@
     }
 
     .background-image-container {
-        width: 650px;
+        width: 630px;
     }
 }
 
@@ -250,6 +250,10 @@
 
     .hero-hero-description-btn-container {
         left: 350px;
+    }
+
+    .background-image-container {
+        width: 690px;
     }
 }
 
