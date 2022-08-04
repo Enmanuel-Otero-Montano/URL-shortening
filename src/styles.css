@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color-two: hsl(257, 27%, 26%);
+    --primary-color-one: hsl(180, 66%, 49%);
+    --button-links-color: hsl(0, 0%, 100%);
+    --neutral-color-one: hsl(0, 0%, 75%);
+    --neutral-color-two: hsl(257, 7%, 63%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.btn {
+    font-size: 1.13rem;
+    font-weight: 700;
+    border: none;
+    color: var(--button-links-color);
+}
+
+.btn-radius {
+    width: 220px;
+    height: 50px;
+    background-color: var(--primary-color-one);
+    border-radius: 25px;
+}
+
+@media (hover: hover){
+    .btn:hover {
+        cursor: pointer;
+        opacity: .7;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .btn-radius {
+        height: 45px;
+    }
+}

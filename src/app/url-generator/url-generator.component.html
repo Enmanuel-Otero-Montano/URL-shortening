@@ -1,0 +1,12 @@
+<div #urlGenerator class="url-generator-container">
+    <input #urlInput type="url" class="input" placeholder="Shorten a link here..." required>
+    <p class="empty-input" [class.show-it]="show">{{errorText}}</p>
+    <button class="btn" (click)="sendUrl(urlInput.value)">Shorten it!</button>
+</div>
+<div #container *ngFor="let urls of urlsArray" class="urls-container">
+    <p class="url">{{urls.url}}</p>
+    <div class="url-shorten-button-container">
+        <p #shortened class="url-shorten">{{urls.urlShorten}}</p>
+        <button #copyButton class="btn copy" ngxClipboard [cbContent]="urls.urlShorten" (click)="clickOnCopyButton(copyButton)">{{copyText}}</button>
+    </div>
+</div>

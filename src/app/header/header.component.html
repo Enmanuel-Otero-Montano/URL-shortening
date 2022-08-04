@@ -1,0 +1,27 @@
+<header class="header">
+    <img src="../../assets/images/logo.svg" alt="logo">
+    <div class="nav-register-container" [class.show-menu]="showMenu">
+        <nav class="nav">
+            <ul class="nav_list">
+                <li>Features</li>
+                <li class="nav_list--pricing">Pricing</li>
+                <li>Resource</li>
+            </ul>
+        </nav>
+        <div class="register-container">
+            <button class="btn">Login</button>
+            <button class="btn btn-radius">Sign Up</button>
+        </div>
+    </div>
+    <button class="btn btn-menu" name="menu" (click)="showHideMenu()">
+        <div class="menu-icon-bars"></div>
+        <div class="menu-icon-bars menu-icon-bars--middle"></div>
+        <div class="menu-icon-bars"></div>
+    </button>
+</header>
+<div class="background-image-container"></div>
+<div class="hero-hero-description-btn-container">
+    <h1 class="hero">More than just shorter links</h1>
+    <p class="hero-description">Buld your brand's recognition and get detailed insights on how your links are performing</p>
+    <button class="btn btn-radius">Get Started</button>
+</div>

@@ -1,0 +1,117 @@
+.statistics-section {
+    text-align: center;
+    background-color: hsl(0, 0%, 94%);
+}
+
+.statistics-title {
+    margin-top: 60px;
+}
+
+.description-paragraph {
+    margin-bottom: 35px;
+    padding: 0 15px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--neutral-color-two);
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min(100%, 1440px);
+    margin: 70px auto 0;
+}
+
+.service {
+    width: min(90%, 345px);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+}
+
+.service__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -45px;
+    width: 90px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--primary-color-two);
+    border-radius: 50%;
+}
+
+.separation-line {
+    width: 8px;
+    height: 90px;
+    background-color: var(--primary-color-one);
+}
+
+.service-name {
+    margin-top: 0;
+}
+
+.boost-your-links {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    margin-top: 60px;
+    background: url(../../assets/images/bg-boost-mobile.svg) no-repeat;
+    background-color: var(--primary-color-two);
+}
+
+.boost-your-links__title {
+    font-size: 1.7rem;
+    color: hsl(0, 0%, 100%);
+}
+
+@media screen and (min-width: 600px) {
+
+    .general-description {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .statistics-section {
+        margin-top: 260px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+
+    .services-container {
+        flex-direction: row;
+        position: relative;
+        z-index: 10;
+    }
+
+    .service:first-of-type {
+        margin-bottom: 100px;
+        margin-left: 120px;
+    }
+
+    .service:last-of-type {
+        margin-top: 100px;
+        margin-right: 120px;
+    }
+
+    .separation-line {
+        position: relative;
+        transform: rotate(90deg);
+        z-index: -1;
+    }
+
+    .boost-your-links {
+        background: url(../../assets/images/bg-boost-desktop.svg) no-repeat;
+        background-color: var(--primary-color-two);
+        background-size: cover;
+    }
+}
